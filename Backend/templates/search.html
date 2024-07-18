@@ -1,0 +1,27 @@
+<!Doctype html>
+<meta charset="UTF-8"/>
+<head>
+  <style>
+    table{
+   overflow-y:scroll;
+   height:500px;
+   width: 100%;
+}
+  </style>
+</head>
+<body>
+<p>{{ licn }}</p>
+<table border="1px">
+<tr>
+ {% for header in heading %}
+ <th>{{ header }}</th>
+ {% endfor %}
+  </tr>
+  {% for row in searchdata %}
+  <tr>
+    {% for dl in row %}
+    <td align="center">{{ dl }}</td>
+    {% endfor %}
+  </tr>
+    {% endfor %}
+</table>
