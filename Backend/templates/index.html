@@ -1,0 +1,78 @@
+<!Doctype html>
+<meta charset="UTF-8"/>
+<head>
+  <style>
+    body{
+      width: 100%;
+    }
+    table{
+   overflow-y:scroll;
+   height:500px;
+   width:33%;
+   display: block;
+   float: left;
+}
+tr:nth-child(even){
+  background-color: rgb(127, 196, 218);
+}
+td,th{
+  width:15%;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+<form action = {{ url_for("table") }} method='post'>
+  <input type = 'text' name="licno" placeholder="Enter License Number">
+  <input type="submit" placeholder="search license">
+</form>
+</br>
+<div>
+<table border="1px">
+<tr>
+ {% for header in headingsearch1 %}
+ <th>{{ header }}</th>
+ {% endfor %}
+  </tr>
+  {% for row in searchdata %}
+  <tr>
+    {% for dl in row %}
+    <td>{{ dl }}</td>
+    {% endfor %}
+  </tr>
+    {% endfor %}
+</table>
+
+<table border="1px">
+<tr>
+ {% for header in heading %}
+ <th>{{ header }}</th>
+ {% endfor %}
+  </tr>
+  {% for row in datalicense %}
+  <tr>
+    {% for dl in row %}
+    <td>{{ dl }}</td>
+    {% endfor %}
+  </tr>
+    {% endfor %}
+</table>
+<!-- </div> -->
+<table border="1px">
+  <tr>
+   {% for header1 in heading1 %}
+   <th>{{ header1 }}</th>
+   {% endfor %}
+    </tr>
+    {% for row1 in datacount %}
+    <tr>
+      {% for dc in row1 %}
+      <td>{{ dc }}</td>
+      {% endfor %}
+    </tr>
+      {% endfor %}
+    
+  </table>
+</div>
+</body>
+</html>
