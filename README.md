@@ -96,6 +96,6 @@ This project implements a pipeline for detecting and recognizing license plates 
 ## Acknowledgments
 
 - **YOLOv5** for license plate detection ([Ultralytics YOLOv5](https://github.com/ultralytics/yolov5)).
-- **PaddleOCR** for text recognition ([PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)).
+- **PaddleOCR** for text recognition ([PaddleOCR](https://github.com/rohanvenkatesha/PaddleOCR).
 
 Feel free to fork, contribute, or raise issues for further enhancements! 🚗💻
